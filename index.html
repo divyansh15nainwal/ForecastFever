@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ForecastFever is a weather forecasting site made by Divyansh Nainwal">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Divyansh Nainwal">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+ 
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>ForecastFever</title>
+</head>
+<body >
+   <div class="container"  >
+    <div class="weather-input w-2/5 fixed inset-0 bg-gradient-to-b from-[#43c9db] to-[#3275c0] p-4 lg:p-10" >
+        <div class="input-group relative flex items-center my-8" >
+            <input type="text" id="userLocation" placeholder="Search for Places..." class="w-full p-4 text-sm capitalize bg-gray-100 rounded-lg outline-none" >
+            <select class="converter absolute right-[45px] border-none outline-none text-lg" id="converter">
+                <option>°C</option>
+                <option>°F</option>
+            </select>
+            
+            <i class="fa fa-search absolute right-[15px] text-xl text-gray-500 cursor-pointer" ></i>
+        </div>
+        <select id="recentSearchesDropdown" >
+            <option value="" disabled selected > Recent Search</option>
+        </select>
+        
+        <h2 class="temperature text-7xl text-white mt-16 ml-10 font-semibold font-serif italic"></h2>
+        <div class="feelsLike  mt-10 ml-10 text-3xl text-white font-serif italic"></div>
+        <div class="description mt-10 ml-10 text-3xl text-white font-normal font-serif italic"></div>
+        
+        <div class="date mt-10 ml-10 text-2xl text-white font-serif"></div>
+        <div class="city mt-10 ml-10 text-4xl text-white font-serif italic"></div>
+    
+    </div>
+    <div class="weather-output  w-3/5 fixed inset-0 ml-[40%] p-8 bg-gradient-to-b from-[#1a6ba5] to-[#aad8ef] overflow-auto">
+        <h2 class="heading text-xl mb-10 ">Today's Highlight</h2>
+        <div class="highlight  grid grid-cols-3 gap-4 mb-8">
+            <div class="humidity">Humidity
+                <i class="fa-solid fa-water"></i>
+                <h1 id="Hvalue"></h1>
+            </div>
+            <div class="wind-speed">Wind Speed
+                <i class="fa-solid fa-wind"></i>
+                <h1 id="Wvalue"></h1>
+            </div>
+            <div class="Sun">Sun
+                <span 
+                   class="fa-solid fa-sun"></i>
+                   <p><span id="SRValue"></span>Sunrise</p>
+                </span>
+                <span 
+                   class="fa-regular fa-sun"></i>
+                   <p><span id="SsValue"></span>Sunset</p>
+                </span>
+            </div>
+            <div class="Clouds">Clouds
+                <i class="fa-solid fa-cloud"></i>
+                <h1 id="Cvalue"></h1>
+            </div>
+            <div class="Uv-index">Uv-index
+                <i class="fa-solid fa-bacon"></i>
+                <h1 id="uvvalue"></h1>
+            </div>
+            <div class="preasure">preasure
+                <i class="fa-solid fa-volcano"></i>
+                <h1 id="pvalue"></h1>
+            </div>
+        </div>
+
+        <h2 id="heading" class="font-bold m-4 text-lg">This Week</h2>
+        <div class="forecast grid grid-cols-5 gap-5 grid-flow-row gap-y-4 bg-cyan-50 h-44 items-center justify-center rounded-xl p-4"></div>
+    </div>
+   </div>
+      
+
+</body>
+</html>
+ 

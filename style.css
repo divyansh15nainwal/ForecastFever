@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins";
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+
+}
+
+.container{
+    display:flex;
+    align-items: center;
+}
+
+
+
+.highlight div{
+    height: 200px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #fffdfd;
+    border-radius: 20px;
+    padding: 1rem;
+}
+.highlight i{
+    font-size: 45px;
+    
+
+}
+.sun span{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+
+}
+@media (max-width: 375px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .weather-input {
+        width: 100%;
+        position: relative;
+        height: auto;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .weather-output {
+        width: 100%;
+        margin-left: 0;
+        padding: 20px;
+        height: auto;
+    }
+
+    .input-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .input-group input {
+        width: calc(100% - 60px); 
+    }
+
+    .input-group select,
+    .input-group i {
+        position: relative;
+        right: auto;
+        top: 10px;
+        margin-left: 10px;
+    }
+
+    .highlight {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .forecast {
+        grid-template-columns: 1fr; 
+        gap: 10px;
+    }
+
+    .temperature {
+        font-size: 5rem;
+    }
+
+    .feelsLike, .description, .date, .city {
+        font-size: 1.5rem; 
+    }
+
+    .heading {
+        font-size: 1.25rem; 
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+}
+
